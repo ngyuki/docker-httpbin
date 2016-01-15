@@ -1,0 +1,13 @@
+# example docker-compose
+
+http:
+  image: ngyuki/httpbin
+  ports:
+    - "13080:80"
+
+https:
+  image: ngyuki/httpbin
+  ports:
+    - "13443:443"
+  environment:
+    HTTPS: "on"
