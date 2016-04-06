@@ -2,12 +2,12 @@
 
 http:
   image: ngyuki/httpbin
-  ports:
-    - "13080:80"
+  ports: ["13080:80"]
+  restart: always
 
 https:
   image: ngyuki/httpbin
-  ports:
-    - "13443:443"
+  ports: ["13443:443"]
+  restart: always
   environment:
     HTTPS: "on"
